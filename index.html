@@ -56,9 +56,41 @@
           <button type="button" class="hero-button" data-modal-open>Order Service</button>
           <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-              <button data-modal-close class="close-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"><circle cx="12" cy="12" r="12" fill="#E7E9FC"/><circle cx="12" cy="12" r="11.5" stroke="#000" stroke-opacity=".1"/><g clip-path="url(#a)"><path fill="#000" d="M16 8.806 15.194 8 12 11.194 8.806 8 8 8.806 11.194 12 8 15.194l.806.806L12 12.806 15.194 16l.806-.806L12.806 12 16 8.806Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M8 8h8v8H8z"/></clipPath></defs></svg>
-              </button>
+                <div class="close-button" data-modal-close>
+                  <svg style="width: 8px; height: 8px;">
+                    <use href="./images/symbol-defs.svg#icon-close"></use>
+                  </svg>
+                </div>
+                <form class="modal-form">
+                  <p class="form-title">Leave your contacts and we will call you back</p>
+                  <label class="label" for="name">Name</label>
+                  <div class="modal-input">
+                    <input class="input" type="text" name="name" id="name" required>
+                    <svg class="form-icon">
+                      <use href="./images/symbol-defs.svg#icon-person"></use>
+                    </svg>
+                  </div>
+                  <label class="label" for="phone">Phone</label>
+                  <div class="modal-input">
+                  <input class="input" type="tel" name="phone" id="phone" required>
+                  <svg class="form-icon">
+                    <use href="./images/symbol-defs.svg#icon-phone"></use>
+                  </svg>
+                  </div>
+                  <label class="label" for="email">Email</label>
+                  <div class="modal-input">
+                  <input class="input" type="email" name="email" id="email" required>
+                    <svg class="form-icon">
+                      <use href="./images/symbol-defs.svg#icon-email"></use>
+                    </svg> 
+                    </div>               
+                  <label class="label" for="comment">Comment</label>
+                  <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Text input"></textarea>
+
+                  <input type="checkbox" name="checkbox" id="checkbox">
+                  <label class="label privacy" for="checkbox">I accept the terms and conditions of the <a href="">Privacy Policy</a></label>
+                  <button type="submit">Send</button>
+                </form>
             </div>
           </div>
         </div>
@@ -436,6 +468,21 @@
               </li>
             </ul>
           </div>
+          <div class="footer-box">
+            <form>
+              <label for="email" class="footer-title"> Subscribe
+              </label>
+              <div class="submit">
+                <input type="email" name="email" id="email" class="submit-input" placeholder="E-mail" required autocomplete="off">
+                            </form>
+                             <button class="submit-button" type="submit">Subscribe
+                            <svg style="width: 24px; height: 24px;">
+                <use  href="./images/symbol-defs.svg#icon-submit"></use>
+                            </svg>
+                          </button>
+              </div>
+          </div>
+         
         </div>
       </div>
     </footer>
