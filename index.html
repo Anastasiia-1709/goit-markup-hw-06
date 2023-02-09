@@ -61,7 +61,8 @@
                     <use href="./images/symbol-defs.svg#icon-close"></use>
                   </svg>
                 </div>
-                <form class="modal-form">
+                <form>
+                  <div class="modal-form">
                   <p class="form-title">Leave your contacts and we will call you back</p>
                   <label class="label" for="name">Name</label>
                   <div class="modal-input">
@@ -86,10 +87,16 @@
                     </div>               
                   <label class="label" for="comment">Comment</label>
                   <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Text input"></textarea>
-
-                  <input type="checkbox" name="checkbox" id="checkbox">
-                  <label class="label privacy" for="checkbox">I accept the terms and conditions of the <a href="">Privacy Policy</a></label>
-                  <button type="submit">Send</button>
+                  </div>
+                  
+                  
+                  <label class="label privacy">
+                     <input class="checkbox" type="checkbox" name="checkbox">
+                  <span class="checkbox-icon"></span>
+                  I accept the terms and conditions of the<span class="privacy-link">&nbsp;<a href="">Privacy Policy</a></span>
+                </label>
+                 
+                  <button type="submit" class="send-button">Send</button>
                 </form>
             </div>
           </div>
