@@ -714,6 +714,8 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  padding: 72px 24px 24px;
 }
 
 .close-button {
@@ -721,17 +723,20 @@ img {
   top: 24px;
   right: 24px;
 
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 
   width: 24px;
   height: 24px;
+  fill: #000000;
 
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
-  transition: background-color 250ms var(--cubic);
+  transition: background-color 250ms var(--cubic), fill 250ms var(--cubic);
 }
 
 .close-button:hover,
@@ -744,7 +749,8 @@ img {
 .modal-form {
   display: flex;
   flex-direction: column;
-  padding: 72px 24px 16px 24px;
+  /* padding: 72px 24px 16px 24px; */
+  margin-bottom: 16px;
 }
 
 .form-title {
@@ -755,7 +761,7 @@ img {
 
 .label {
   font-size: 12px;
-  line-height: 0.75;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   text-align: left;
@@ -806,22 +812,22 @@ textarea {
   padding: 8px 16px;
   font-family: inherit;
   font-size: 12px;
-  line-height: 0.75;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 
   transition: border-color 250ms var(--cubic);
 }
 .input {
-  width: 360px;
+  width: 100%;
   height: 40px;
   padding-left: 38px;
-  margin-bottom: 8px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   font-family: inherit;
   font-size: 12px;
-  line-height: 0.75;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 
@@ -835,7 +841,7 @@ textarea:focus-visible,
 textarea::placeholder {
   font-family: inherit;
   font-size: 12px;
-  line-height: 0.75;
+  line-height: 1.17;
   color: rgba(117, 117, 117, 0.5);
 }
 textarea:focus,
@@ -845,14 +851,23 @@ textarea:focus,
 
 .modal-input {
   position: relative;
+  margin-bottom: 8px;
 }
 
 .form-icon {
   position: absolute;
-  top: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 16px;
   width: 18px;
   height: 24px;
+  fill: #2e2f42;
+
+  transition: fill 250ms var(--cubic);
+}
+
+.input:focus + .form-icon {
+  fill: var(--brand-color);
 }
 
 .send-button {
@@ -868,8 +883,11 @@ textarea:focus,
   color: #ffffff;
   border: none;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   padding: 8px 24px;
-  margin: 24px auto;
+  margin: 0 auto;
+  margin-top: 24px;
 
   transition: background-color 250ms var(--cubic);
 }
